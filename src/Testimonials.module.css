@@ -1,0 +1,36 @@
+
+.testimonials {
+  background-color: #f0f0f0;
+  padding: 4rem 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.testimonial-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 1200px; /* Maximum width of the container */
+  width: 100%; /* Full width to utilize the space */
+  margin: 0 auto; /* Centering the container */
+}
+
+.testimonial-block {
+  margin: 0 20px; /* Spacing between testimonial blocks */
+  flex: 1; /* Distributes space evenly */
+  text-align: left; /* Aligns text to the left within each block */
+}
+
+.author {
+  font-style: italic;
+  color: #777;
+  display: block; /* Ensures it is on a new line */
+}
+
+@media (max-width: 768px) {
+  .testimonial-container {
+    flex-direction: column; /* Stacks the testimonials on smaller screens */
+  }
+}

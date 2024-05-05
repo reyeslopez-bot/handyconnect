@@ -1,0 +1,87 @@
+/* Calendar base styles */
+.calendar-container {
+    width: 90%;
+    margin: auto;
+    border-collapse: collapse;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* 7 columns for the days of the week */
+    grid-gap: 5px;
+  }
+  
+  .calendar-container th, .calendar-container td {
+    border: 1px solid #ccc;
+    padding: 10px; /* unified padding */
+    text-align: center;
+    background-color: #f9f9f9;
+  }
+  
+  .calendar-container th {
+    background-color: #f0f0f0;
+  }
+  
+  /* Date cell specific */
+  .date-cell {
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+  }
+  
+  .date-cell:hover {
+    background-color: #ddf; /* Lighter color on hover for better interaction feedback */
+  }
+  
+  .date-cell.selected {
+    background-color: #333; /* A darker shade for selected dates */
+    color: white;
+  }
+  
+  /* Adjustments for accessibility */
+  .date-cell:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #0056b3; /* Blue outline for focus, ensures visibility against different backgrounds */
+  }
+  
+  /* Utilitarian styles */
+  button {
+    margin: 0 5px;
+    padding: 0.5rem 1rem; /* More clickable area */
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover, button:focus {
+    background-color: #004c9a; /* Slightly darker on hover/focus */
+  }
+  
+  /* Additional structural styles */
+  .calendar-container div {
+    text-align: center;
+    margin-top: 10px;
+  }
+  input[type="time"], input[type="text"], select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button {
+    width: auto; /* Adjust as necessary */
+    padding: 10px 20px; /* More padding for better clickability */
+    margin-top: 10px; /* Space above the button */
+  }
+  .selectable {
+    cursor: pointer;
+  }
+  
+  .activated {
+    background-color: #444; /* Dark grey, adjust color as needed */
+    color: white;
+  }
+  
+  .not-in-month {
+    background-color: #f0f0f0; /* Light grey, non-selectable days */
+  }
